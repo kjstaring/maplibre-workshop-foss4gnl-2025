@@ -27,7 +27,8 @@ map.on('load', () => {
                 'line-cap': 'round'
             },
             'paint': {
-                'line-color': '#888',
-                'line-width': 8
+                'line-color': '#356307',
+                'line-width': 4,
+                'line-dasharray': [2,2]
             }
         })});
