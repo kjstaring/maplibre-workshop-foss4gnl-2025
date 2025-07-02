@@ -17,7 +17,7 @@ map.on('load', () => {
             'type': 'geojson',
             'data': './assets/wandeling.geojson'
             }
-        });
+        );
         map.addLayer({
             'id': 'route',
             'type': 'line',
@@ -30,4 +30,4 @@ map.on('load', () => {
                 'line-color': '#888',
                 'line-width': 8
             }
-        });
+        })});
