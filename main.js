@@ -11,3 +11,23 @@ const map = new maplibregl.Map({
     center: [5.66509, 51.96857], // starting position [lng, lat]
     zoom: 13 // starting zoom
 });
+
+map.on('load', () => {
+        map.addSource('route', {
+            'type': 'geojson',
+            'data': './assets/wandeling.geojson'
+            }
+        });
+        map.addLayer({
+            'id': 'route',
+            'type': 'line',
+            'source': 'route',
+            'layout': {
+                'line-join': 'round',
+                'line-cap': 'round'
+            },
+            'paint': {
+                'line-color': '#888',
+                'line-width': 8
+            }
+        });
